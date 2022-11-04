@@ -1,0 +1,56 @@
+@import "vars"
+@import "colors"
+@import "mixins"
+@import "ham7"
+@import "sidebar"
+*
+    padding: 0
+    margin: 0
+    font-family: 'Montserrat', sans-serif
+    font-weight: 500
+    box-sizing: border-box
+h1,h2,h3
+    font-family: 'Lato', sans-serif
+h1
+    font-size: 96px
+    font-weight: 700
+body
+    background: #F5F5F5
+li
+    list-style: none
+button,a 
+    cursor: pointer
+    +inher
+    text-decoration: none
+    border: 0 none
+    outline: 0 none
+    background: none
+.container
+    max-width: $mainContainer
+    width: 100%
+    margin: 0 auto
+.link__block
+    display: flex
+    justify-content: center
+.section__title
+    font-size: 40px
+    font-weight: 700
+    color: $braun
+img
+    width: 100%
+    height: auto
+main 
+    max-width: 100%
+    overflow-x: hidden
+input, select
+    border: 0 none
+    outline: 0 none
+@media screen and (max-width: $mainContainer)
+    .container
+        width: 98%
+@media screen and (max-width: 1020px)
+    h1
+        font-size: 8.5vw
+@media screen and (max-width: $smallTabletContainer)
+    .section__title
+        font-size: 40px

@@ -1,19 +1,54 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    name: "homepage",
+    component: () => import('../views/HomePage.vue'),
+    meta: {
+      title: "Добро пожаловать"
+    }
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: "/MainPage",
+    name: "MainPage",
+    component: () => import("../views/MainPage"),
+    meta: {
+      title: "Главная страница"
+    }
+  },
+  {
+    path: "/productPage/:id",
+    name: "ProductPage",
+    props: true,
+    component: () => import("../views/ProductPage"),
+    meta: {
+      title: "Страница рецепта"
+    }
+  },
+  {
+    path: "/Favourites",
+    name: "Favourites",
+    component: () => import("../views/Favourites"),
+    meta: {
+      title: "Избранное"
+    }
+  },
+  {
+    path: "/RandomProducts",
+    name: "RandomProducts",
+    component: () => import("../views/RandomProducts"),
+    meta: {
+      title: "Случайное блюдо"
+    }
+  },
+  {
+    path: "/Recipes",
+    name: "Recipes",
+    component: () => import("../views/Recipes"),
+    meta: {
+      title: "Рецепты"
+    }
   }
 ]
 
@@ -23,3 +58,7 @@ const router = createRouter({
 })
 
 export default router
+const DEFAULT_TITLE = 'Не задан заголовок';
+router.beforeEach((to) => {
+  document.title = to.meta.title || DEFAULT_TITLE;
+});

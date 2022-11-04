@@ -1,0 +1,70 @@
+{
+    "id": "PR-1",
+    "title": "",
+    "description": "",
+    "MainSlider": false,
+    "ProductOfDay": true,
+    "timeForCookong": 0,
+    "TypeOfproducts": "breakfast lunch dinner",
+    "quantityOfServings": 0,
+    "image": "",
+    "moreDescription": "",
+    "CoocingLevel": "hard",
+    "ingredients": [
+        {
+            "title": "",
+            "quantity": ""
+        },
+        {
+            "title": "",
+            "quantity": ""
+        },
+        {
+            "title": "",
+            "quantity": ""
+        },
+        {
+            "title": "",
+            "quantity": ""
+        },
+        {
+            "title": "",
+            "quantity": ""
+        },
+        {
+            "title": "",
+            "quantity": ""
+        },
+        {
+            "title": "",
+            "quantity": ""
+        },
+        {
+            "title": "",
+            "quantity": ""
+        }
+    ],
+    "steps": [
+        {
+            "title": ""
+        },
+        {
+            "title": ""
+        },
+        {
+            "title": ""
+        },
+        {
+            "title": ""
+        },
+        {
+            "title": ""
+        },
+        {
+            "title": ""
+        },
+        {
+            "title": ""
+        }
+    ]
+}
