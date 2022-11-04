@@ -49,7 +49,7 @@ export default createStore({
   actions: {
     async GET_PRODCUTS_FROM_DB({commit}){
       try {
-        const products = await axios("http://localhost:3000/products", {
+        const products = await axios("https://raw.githubusercontent.com/sedm1/selldish/main/db.json", {
           method: "GET"
         })
         commit("SET_PRODUCTS_TO_STATE", products.data)
